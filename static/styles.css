@@ -1,0 +1,53 @@
+
+body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main {
+    position: fixed;
+    height: 100%;
+    background-color: black;
+    overflow: auto;
+}
+
+.main p {
+    font-size: 15.5px;
+}
+
+.search{
+    text-align: center;
+    color: white;
+}
+
+.search .s {
+    color: white;
+    background-color: transparent;
+}
+
+
+.title {
+    padding: 10px;
+    background-color: #0c0c0c;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.title p {
+    font-size: 15px;
+}
+
+.dlbtn {
+    height: 35px;
+    width: 230px;
+    color: white;
+    background-color: transparent;
+}
+
+.searchbtn {
+    height: 33px;
+    width: 70px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- http://getbootstrap.com/docs/5.3/ -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Nectar</title>
+    </head>
+    <body>
+        <main class="main container-fluid">
+
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                  <div class="search col-md-6 col-sm-8 col-12">
+                    <img src="static/nectar1.jpg" style="width: 300px; height: auto; ">
+                      <p>DOWNLOAD YOUTUBE MUSIC FOR FREE</p>
+                      <p style="font-size: 10px;">© Developer | Aaron Lance Flores</p>
+                    <form action="/" method="post">
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="s form-control" name="search">
+                            <button type="submit" class="searchbtn btn btn-light"><p>Search</p></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <hr style="color: white;">
+                <div class="container mt-5">
+                  {% for title, id in musics %}
+                  <div class="title row justify-content-center">
+                    <div class="search col-md-6 col-sm-8 col-12">
+                      <form action="/download" method="post">
+                        <p>{{ title }}</p>
+                        <input type="hidden" name="id" value="{{ id }}">
+                        <button type="submit" class="dlbtn btn btn-light"><p>Download</p></button>
+                      </form>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+        </main>
+    </body>
+</html>
